@@ -168,6 +168,8 @@ export default [
         "env.d.ts",
         "vite.config.ts",
         "eslint.config.js",
+        "*.config.js",
+        "*.config.mjs",
       ],
       "import/resolver": {
         typescript: true,
