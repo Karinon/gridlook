@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/Karinon/gridlook/compare/v1.0.0...v1.1.0) (2026-04-01)
+
+
+### Features
+
+* **dev:** added dependabot workflow ([d2158fe](https://github.com/Karinon/gridlook/commit/d2158fe48f100e66e50807c89cf875965db66e18))
+* **dev:** added lint-staged and a type-check to husky ([8fde32b](https://github.com/Karinon/gridlook/commit/8fde32b204381d8c6c3e30c1a64b688e5800f0f4))
+
 ## 1.0.0 (2026-03-31)
 
 
