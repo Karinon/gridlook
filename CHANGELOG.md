@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.0 (2026-03-31)
+
+
+### Features
+
+* **dev:** added old changelog ([5b3cba9](https://github.com/Karinon/gridlook/commit/5b3cba9803728b0cd41fb7bc968239a9ab5f8238))
+* **dev:** added old changelog ([4a9ef72](https://github.com/Karinon/gridlook/commit/4a9ef72c3bc6d6c863d2c129d50bc97733965807))
+* **dev:** added versioning ([753a273](https://github.com/Karinon/gridlook/commit/753a273e59e014f08b9afd6ca272b636638b4609))
+
+## Changelog
+
 This changelog is generated from first-parent merge requests and pull requests, not from individual commit messages.
 
 ## May 2022
