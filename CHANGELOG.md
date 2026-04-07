@@ -1,8 +1,26 @@
+# Changelog
+
+## 1.0.0 (2026-04-07)
+
+
+### Features
+
+* **config:** added changelog for previous PRs ([e2eb2e8](https://github.com/Karinon/gridlook/commit/e2eb2e862046901f1db78df78d09f98a844727a1))
+* **ui:** Added Catalog-Feature ([48c304a](https://github.com/Karinon/gridlook/commit/48c304af5c261d1391e6af3ea1f3c743edf92068))
+
+
+### Bug Fixes
+
+* **lib:** fixed broken cellCoords for Healpix ([7d4464f](https://github.com/Karinon/gridlook/commit/7d4464f2ec13f49d4196a1e146777d965b80015e))
+* **lib:** fixed broken dimension value information, when the value is a string ([3ea3c64](https://github.com/Karinon/gridlook/commit/3ea3c64782b5ad24ebc8cc1a9fe028f0658fc505))
+* **lib:** fixed broken time info when time dimension is not at first pos ([0115aaa](https://github.com/Karinon/gridlook/commit/0115aaa4739154e18dbc9e23c6cf3b4bbe853d16))
+
 ## Pre-Versioning Changelog
 
 For the period covered below, this changelog was organized in a conventional-commit-inspired format, inferred from merge request and pull request titles rather than commit messages.
 
 Because the project did not use version tags yet, entries were grouped by month instead of release version. Category assignments were approximate when a PR title spanned more than one conventional-commit type.
+
 
 ## 2026-03
 
