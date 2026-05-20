@@ -2,8 +2,14 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
+    tags:
+      - "v*"
+  workflow_call:
+    inputs:
+      ref:
+        description: "Git ref to build and deploy."
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -20,6 +26,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+        with:
+          ref: ${{ inputs.ref || github.ref }}
 
       - uses: actions/setup-node@v6.4.0
         with:
