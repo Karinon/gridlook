@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/Karinon/gridlook/compare/v1.3.0...v1.4.0) (2026-09-01)
+
+
+### Features
+
+* yet another try ([0f5ef51](https://github.com/Karinon/gridlook/commit/0f5ef51e41d9a9a30637725ed1216096ffa78a48))
+* yet another try ([17fd283](https://github.com/Karinon/gridlook/commit/17fd283ab1ce8746d30e31875a2a096662cd47b6))
+
 ## [1.3.0](https://github.com/Karinon/gridlook/compare/v1.2.0...v1.3.0) (2026-09-01)
 
 
