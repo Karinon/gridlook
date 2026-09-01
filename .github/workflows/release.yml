@@ -23,6 +23,33 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
 
+  create-version-branch:
+    needs: release-please
+    if: ${{ needs.release-please.outputs.release_created == 'true' }}
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Create version branch
+        env:
+          TAG_NAME: ${{ needs.release-please.outputs.tag_name }}
+        run: |
+          BRANCH_NAME="release/${TAG_NAME}"
+
+          echo "Creating ${BRANCH_NAME} from ${TAG_NAME}"
+
+          git init
+          git remote add origin "https://github.com/${{ github.repository }}.git"
+
+          git fetch origin "refs/tags/${TAG_NAME}:refs/tags/${TAG_NAME}"
+
+          git checkout -b "${BRANCH_NAME}" "${TAG_NAME}"
+
+          git push origin "${BRANCH_NAME}"
+
+
   deploy-pages:
     needs: release-please
     if: ${{ needs.release-please.outputs.release_created == 'true' }}
