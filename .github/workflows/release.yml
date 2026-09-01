@@ -32,7 +32,13 @@ jobs:
       contents: write
 
     steps:
-      - name: Create version branch
+      - name: Checkout release tag
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.release-please.outputs.tag_name }}
+          fetch-depth: 0
+
+      - name: Create and push version branch
         env:
           TAG_NAME: ${{ needs.release-please.outputs.tag_name }}
         run: |
@@ -40,13 +46,7 @@ jobs:
 
           echo "Creating ${BRANCH_NAME} from ${TAG_NAME}"
 
-          git init
-          git remote add origin "https://github.com/${{ github.repository }}.git"
-
-          git fetch origin "refs/tags/${TAG_NAME}:refs/tags/${TAG_NAME}"
-
-          git checkout -b "${BRANCH_NAME}" "${TAG_NAME}"
-
+          git switch -c "${BRANCH_NAME}"
           git push origin "${BRANCH_NAME}"
 
 
