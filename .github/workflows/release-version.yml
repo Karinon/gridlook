@@ -1,0 +1,26 @@
+name: Create release branch
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  create-branch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create branch from release tag
+        run: |
+          VERSION="${{ github.event.release.tag_name }}"
+          BRANCH="version/${VERSION}"
+
+          git switch -c "$BRANCH"
+          git push origin "$BRANCH"
